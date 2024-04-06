@@ -316,7 +316,6 @@ nav a:hover {
 .card {
     margin-top: 50px;
     margin-bottom: 50px;
-    width: 450px;
     height: 750px;
     background-image: linear-gradient(to right, #FB88B4, #18adb8);
     border: 5px solid #F9F07A;
