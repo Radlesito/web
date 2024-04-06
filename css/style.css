@@ -3,12 +3,14 @@ body {
     margin: 0;
     padding: 0;
     background-color: #f0f0f0;
-    overflow-x: hidden;
+    overflow-x: hidden; /* Evitar desplazamiento horizontal */
     position: relative;
     padding-bottom: 3em;
     min-height: 100vh;
     background-color: #FB88B4;
 }
+
+/* Estilos comunes para header en todas las pantallas */
 header {
     display: grid;
     justify-items: center;
@@ -18,23 +20,68 @@ header {
     background-size: cover;
     background-repeat: no-repeat;
     background-image: linear-gradient(to bottom, #FB88B4, #18adb8);
-    width: 100%;
-    height: 300px;
     color: #fff;
-    padding: 20px;
     font-size: xx-large;
 }
 
-header img{  
-    width: 300px;
+header img {
+    width: 300px; /* Ajustar tamaño según necesidades */
     height: 300px;
     margin-right: 20px;
     border-radius: 50px;
-    
 }
 
-header h1{
+header h1 {
     margin-top: 125px;
+}
+
+/* Media query para dispositivos móviles */
+@media screen and (max-width: 600px) {
+    header {
+        font-size: large; /* Reducir tamaño de fuente */
+    }
+
+    header img {
+        width: 200px; /* Reducir tamaño de imagen */
+        height: 200px;
+        margin-right: 10px;
+    }
+
+    header h1 {
+        margin-top: 50px; /* Reducir margen superior */
+    }
+
+    /* Otros estilos para elementos específicos en móviles */
+    .sect1 img {
+        height: 300px; /* Reducir tamaño de imagen en sección 1 */
+    }
+
+    .sect1 p {
+        width: auto; /* Ajustar ancho del texto en sección 1 */
+    }
+
+    .grid-layout {
+        margin-left: 10px; /* Ajustar margen izquierdo en cuadrícula */
+        margin-right: 10px; /* Ajustar margen derecho en cuadrícula */
+    }
+
+    /* Ajuste para la sección de la carta */
+    .card-container {
+        max-width: 100%; /* Ajustar el ancho máximo para evitar desbordamiento */
+        overflow-x: hidden; /* Ocultar el desplazamiento horizontal */
+    }
+
+    .card {
+        width: 90%; /* Reducir ancho para ajustarse al ancho de la pantalla */
+        max-width: 400px; /* Ancho máximo para evitar que sea demasiado grande */
+        height: auto; /* Permitir que la altura se ajuste automáticamente */
+    }
+
+    /* Ajuste para el pie de página en dispositivos móviles */
+    footer {
+        width: 100vw; /* Ancho igual al ancho de la ventana */
+        max-width: 100vw;
+    }
 }
 
 /*seccion 1*/
@@ -352,9 +399,10 @@ footer {
     background-color: #333;
     color: #fff;
     text-align: center;
-    padding: 1em;    
     bottom: 0;
-    width: 100%;    
+    width: 100%; /* Ancho igual al ancho de su contenedor */
     margin-top: auto;
     position: absolute;
+    left: 0;
+    max-width: 100%;
 }
