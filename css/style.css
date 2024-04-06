@@ -84,6 +84,19 @@ header h1 {
     }
 }
 
+
+
+@media screen and (max-width: 850px) {
+    .card {
+        max-width: 85%; /* Ancho máximo para evitar que sea demasiado grande */
+        height: auto; /* Permitir que la altura se ajuste automáticamente */
+    }
+
+    .card-container{
+        height: 10%;
+    }
+}
+
 /*seccion 1*/
 .sect1{
     display: grid;
@@ -140,15 +153,11 @@ nav {
     color: #fff;
     display: flex;
     justify-content: space-around;
-    padding: 0 20%;
-    
 }
 nav a {
-    float: left;
     display: flex;
     color: #fff;
     text-align: center;
-    padding: 14px 16px;
     text-decoration: none;
     padding: 10px;
     transition: all 0.3s;
